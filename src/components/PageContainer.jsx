@@ -1,17 +1,16 @@
-import React  from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
+import React from 'react';
 import Container from '@mui/material/Container';
-import Card from './Card';
+import Typography from '@mui/material/Typography';
+import NamesContainer from './NamesContainer';
 
 const PageContainer = () => {
   return (
     <>
-      <CssBaseline />
-      <Container fixed>
-        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }}>
-          <Card />
-        </Box>
+      <Container fixed style={{ marginTop: '1em' }}>
+        <Typography variant="h2" gutterBottom component="div">
+          Random Name Picker
+        </Typography>
+        <NamesContainer />
       </Container>
     </>
   );
