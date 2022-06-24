@@ -1,8 +1,7 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import NameCard from './NameCard';
-import Button from '@mui/material/Button'
-// import PickNameButton from './PickNameButton';
 import { getRandomName, names } from '../helpers/get-random-name';
 
 const NamesContainer = () => {

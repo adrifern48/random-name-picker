@@ -6,14 +6,31 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import '../App.css';
+import TextField from '@mui/material/TextField';
 
 const NameCard = (props) => {
+  const [text, setText] = React.useState(props.text);
+  const [editName, setEditName ] = React.useState(false);
+
+  const handleNameChange = (e) => { 
+    setText(e.target.value); 
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      setEditName(false);
+    }
+  };
+
   return (
     <Card sx={{ minWidth: '8em', margin: '0.5em' }} variant={props.picked && 'outlined'} className={props.picked ? "CardStyle-Picked" : "CardStyle"}>
       <CardContent>
-        <Typography sx={{ fontSize: 18 }}>
-          {props.text}
-        </Typography>
+      <TextField
+          disabled={!editName}
+          defaultValue={text}
+          onChange={handleNameChange}
+          onKeyDown={handleKeyPress}
+      />
       </CardContent>
       <CardActions>
         <Grid
@@ -22,8 +39,8 @@ const NameCard = (props) => {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Button size="small">Edit Name</Button>
-          <Button size="small">Remove</Button>
+          <Button size="small" onClick={() => setEditName(true)} variant="outlined">Edit Name</Button>
+          <Button size="small" variant="outlined">Remove</Button>
         </Grid>
       </CardActions>
     </Card>
