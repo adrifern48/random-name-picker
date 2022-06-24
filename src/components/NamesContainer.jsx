@@ -1,7 +1,7 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import NameCard from './NameCard';
-import PickNameButton from './PickNameButton';
 import { getRandomName, names } from '../helpers/get-random-name';
 
 const NamesContainer = () => {
@@ -28,7 +28,14 @@ const NamesContainer = () => {
           <NameCard text={name} picked={name === pickedName} />
         )}
       </Grid>
-      <PickNameButton />
+      <Button
+        variant="contained"
+        size="small"
+        onClick={() => { handlePickName(getRandomName(names)) }}
+      >
+        Pick Name
+      </Button>
+      <h1>{pickedName}</h1>
     </>
   );
 }
