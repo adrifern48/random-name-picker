@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
 .App {
   text-align: center;
 }
@@ -14,18 +16,28 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.MuiPaper-root.CardStyle {
+  background-color: #E0E0E0;
+}
+
+.MuiPaper-root.CardStyle-Picked{
+  background-color: #CDBFE2;
+  box-shadow: 0px 8px 16px RGBA(0,0,0,.25);
 }
 
 @keyframes App-logo-spin {

@@ -5,10 +5,11 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import '../App.css';
 
 const NameCard = (props) => {
   return (
-    <Card sx={{ minWidth: '8em', margin: '0.5em' }} variant={props.picked && 'outlined'}>
+    <Card sx={{ minWidth: '8em', margin: '0.5em' }} variant={props.picked && 'outlined'} className={props.picked ? "CardStyle-Picked" : "CardStyle"}>
       <CardContent>
         <Typography sx={{ fontSize: 18 }}>
           {props.text}

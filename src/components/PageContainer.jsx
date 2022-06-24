@@ -6,8 +6,8 @@ import NamesContainer from './NamesContainer';
 const PageContainer = () => {
   return (
     <>
-      <Container fixed style={{ marginTop: '1em' }}>
-        <Typography variant="h2" gutterBottom component="div">
+      <Container fixed style={{ marginTop: '2em', textAlign: 'left'}}>
+        <Typography variant="h2" gutterBottom component="div" sx={{ fontWeight: '900' }}>
           Random Name Picker
         </Typography>
         <NamesContainer />
